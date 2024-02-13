@@ -11,6 +11,7 @@ return new class extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('trains', function (Blueprint $table) {
@@ -20,15 +21,13 @@ return new class extends Migration
             $table->string('arrival_station', 100);
             $table->dateTime('departure_time');
             $table->dateTime('arrival_time');
-            $table->INT('train_code');
-            $table->tinyINT('Number_of_carriage');
-            $table->boolean('on_time');
-            $table->boolean('erased');
+            $table->integer('train_code');
+            $table->tinyInteger('number_of_carriage');
+            $table->boolean('on_time')->default(true);
+            $table->boolean('erased')->default(false);
             $table->timestamps();
-
         });
     }
-
     /**
      * Reverse the migrations.
      *

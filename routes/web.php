@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// Importo il Controller 
+use App\Http\Controllers\Guest\MainController;
 
-Route::get('/', function () {
+// imposto il controller nella route in modo che anzichè riturnarmi semplicemente la pagina vada 
+// a usare MainCOntroller 
 
-    return view('pages.index');
-});
+Route::get('/', [MainController :: class, 'index'] );
