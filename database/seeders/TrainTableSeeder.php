@@ -5,16 +5,18 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+// Importo il Model che voglio usare: 
+use App\Models\Trains;
 
-class DatabaseSeeder extends Seeder
+class TrainTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this -> call([TrainTableSeeder::class]);
+        TrainsFactory::factory () -> count (97) -> create();
     }
 }

@@ -23,8 +23,6 @@ return new class extends Migration
             $table->dateTime('arrival_time');
             $table->string  ('train_code');
             $table->integer ('number_of_carriage');
-            $table->boolean ('on_time')->default(true);
-            $table->boolean ('erased')->default(false);
             $table->timestamps();
         });
     }
