@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class TrainfactoryFactory extends Factory
+class TrainsFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -27,7 +27,7 @@ class TrainfactoryFactory extends Factory
             'train_code' => fake() -> numerify('codenumber-####'),
             'number_of_carriage' => fake() -> numberBetween(5, 30),
             'on_time' => fake() -> boolean (),
-            'erased' => fake() -> erased (),
+            'erased' => fake() -> boolean (),
         ];
     }
 }

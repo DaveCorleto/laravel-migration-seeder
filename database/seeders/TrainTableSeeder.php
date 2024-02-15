@@ -7,6 +7,8 @@ use Illuminate\Database\Seeder;
 
 // Importo il Model che voglio usare: 
 use App\Models\Trains;
+// Devo importare la factory? 
+// use Database\Factories\TrainsFactory;
 
 class TrainTableSeeder extends Seeder
 {
@@ -17,6 +19,6 @@ class TrainTableSeeder extends Seeder
      */
     public function run()
     {
-        TrainsFactory::factory () -> count (97) -> create();
+        Trains :: factory () -> count (97) -> create();
     }
 }
